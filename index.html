@@ -3,32 +3,43 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GifGenerator</title>
     <link rel="stylesheet" href="resources/css/styles.css">
 </head>
 
 <body>
-    <header>Gif Generator</header>
+    <header>
+        <span class="title">Gif Generator</span>
+        <span class="button create-gif ">Create Gif</span>
+    </header>
     <content>
         <div class="out">
-            <div class="output video-box">
-                <span class="button create-frame hidden">Get Frame</span>
-                <p class="video-prompt">Drag video here...</p>
+            <div class="output video-box playing">
+                <span class="button create-frame">Get Frame</span>
+                <p class="video-prompt hidden">Drag video here...</p>
                 <!-- Video-Element zur Ausgabe des importierten Videos -->
-                <video class="video" width="480" height="360" controls="true"></video>
+                <video class="video" width="480" height="360" controls="true">
+                    <source src="videos/HarmonicAirshow.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="output gif-box">
+                <span class="hint">Das erstellte GIF wird hier angezeigt</span>
                 <!-- Element zur Ausgabe des erstellten GIFs in einem img-Container -->
             </div>
         </div>
         <div class="frames-box">
-            <canvas class="canvas hidden" width="480" height="480"></canvas>
+            <canvas class="canvas hidden" width="480" height="360"></canvas>
             <ul class="frames">
-                <!-- Liste der exportierten Einzelbilder -->
             </ul>
         </div>
-        <div class="button create-gif disabled">Create Gif</div>
     </content>
+    <template id="frame">
+        <li draggable="true">
+            <img height="" width="" frame="" src="">
+            <span class="button delete-frame">remove</span>
+        </li>
+    </template>
     <script src="vendors/gifjs/gif.js"></script>
     <script type="module" src="resources/js/app.js"></script>
 </body>

@@ -1,4 +1,4 @@
-# Zweite Übungsaufgabe: Countdown
+# Zweite Übungsaufgabe: Gif-Generator
 
 Die Anleitung zur Aufgabe (*Handout*) finden Sie [hier](https://regensburger-forscher.de/mme/Aufgaben/WS1920-02-GifGenerator/). 
 
